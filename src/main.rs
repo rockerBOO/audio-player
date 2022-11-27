@@ -63,12 +63,25 @@ Maybe we don't support your OS, but we couldn't find a default sound device."
         sink.set_speed(speed);
     }
 
+    let file = match File::open(&opts.input) {
+        Ok(v) => v,
+        Err(err) => {
+            bail!(
+                "Could not find this file: {:?}.
+Error Message: {err}
+It is there, right?
+Good luck!",
+                &opts.input
+            );
+        }
+    };
+
     // Load a sound from a file, using a path relative to Cargo.toml
-    let file = BufReader::new(File::open(&opts.input).unwrap());
+    let buf = BufReader::new(file);
 
     log(&opts)(&format!("read: {:?}", &opts.input));
     // Decode that sound file into a source
-    let source = match Decoder::new(file) {
+    let source = match Decoder::new(buf) {
         Ok(v) => v,
         Err(err) => {
             bail!("Could not decode this file: {:?}. 
@@ -86,4 +99,13 @@ Consider re-encoding this audio file into one of the supported types. https://gi
     log(&opts)("complete!");
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn test_hello() {
+        println!("Hello world");
+    }
 }

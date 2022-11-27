@@ -51,6 +51,14 @@ ln -sn /path/to/audio-player/target/release/audio-player ~/bin/audio-player
 
 Or just move the binary where where you want.
 
+## Audio conversion
+
+Take a video file and extract only the first audio channel. Also works to convert audio files into ogg/vorbis.
+
+```
+ffmpeg -i lsd.ogg -acodec libvorbis -c copy -map 0:a -vn -sn output.ogg
+```
+
 ## Motivation
 
 A simple player that plays the audio file and quits. Needs to support major codecs.
