@@ -27,6 +27,30 @@ Options:
 - MP4
 - ACC
 
+## Usage
+
+### Manual
+
+Not packaged up yet so you'll need to clone this repo and build your own version.
+
+```
+cargo build --release
+```
+
+And you can alias it...
+
+```
+alias audio-player="/path/to/audio-player/target/release/audio-player"
+```
+
+Or make a link to the binary...
+
+```
+ln -sn /path/to/audio-player/target/release/audio-player ~/bin/audio-player
+```
+
+Or just move the binary where where you want.
+
 ## Motivation
 
 A simple player that plays the audio file and quits. Needs to support major codecs.
