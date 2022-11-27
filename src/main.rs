@@ -30,7 +30,7 @@ struct Options {
 fn log(opts: &Options) -> impl Fn(&str) -> () + '_ {
     let verbose = opts.verbose.clone();
     move |log: &str| {
-        if let Some(_) = verbose {
+        if let Some(true) = verbose {
             println!("{log}");
         }
     }
