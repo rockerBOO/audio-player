@@ -103,7 +103,6 @@ Consider re-encoding this audio file into one of the supported types. https://gi
 
 #[cfg(test)]
 mod tests {
-
     #[test]
     fn test_hello() {
         println!("Hello world");

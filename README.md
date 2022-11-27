@@ -29,6 +29,12 @@ Options:
 
 ## Install
 
+### Cargo
+
+```
+cargo install --git https://github.com/rockerBOO/audio-player.git audio-player
+```
+
 ### Manual
 
 Not packaged up yet so you'll need to clone this repo and build your own version.
