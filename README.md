@@ -27,7 +27,7 @@ Options:
 - MP4
 - ACC
 
-## Usage
+## Install
 
 ### Manual
 
