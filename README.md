@@ -51,6 +51,14 @@ Take a video file and extract only the first audio channel. Also works to conver
 ffmpeg -i lsd.ogg -acodec libvorbis -c copy -map 0:a -vn -sn output.ogg
 ```
 
+## Samples
+
+Download an audio file from some source
+
+```
+yt-dlp -f 'ba' -x --audio-format vorbis URL
+```
+
 ## Motivation
 
 A simple player that plays the audio file and quits. Needs to support major codecs.
