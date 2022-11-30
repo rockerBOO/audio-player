@@ -2,7 +2,7 @@
 
 A very simple audio player. A slight abstraction over playing audio using the rust rodio library.
 
-![audio player](https://user-images.githubusercontent.com/15027/204857859-384034b9-349c-471d-b36c-efa4b4b53292.png)
+![audio player](https://user-images.githubusercontent.com/15027/204929665-89f5695f-7aa1-4c71-8fe8-6056d7b6e378.png)
 
 ```
 Usage: audio-player [--volume <volume>] [--speed <speed>] [--verbose <verbose>] input
