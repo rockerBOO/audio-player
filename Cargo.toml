@@ -9,3 +9,7 @@ edition = "2021"
 rodio = "0.16.0"
 argh = "0.1.9"
 anyhow = "1.0.66"
+
+[profile.release]
+# v This is now used by default, if not provided
+strip = "debuginfo"
